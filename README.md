@@ -89,7 +89,7 @@ Customers with no default history are the most likely to subscribe to CDs. Housi
 
 ### Outlier Handling
 
-Outliers in numerical variables were handled using the Winsorization method, capping between the 5th and 95th percentiles. These thresholds were determined using the non-parametric Wilcoxon Rank Sum Test to ensure the distribution of variables remained consistent before and after transformation as shown in Figure 2.
+Outliers in numerical variables were handled using the Winsorization method, capping between the 5th and 95th percentiles. These thresholds were determined using the non-parametric Wilcoxon Rank Sum Test to ensure the distribution of variables remained consistent before and after transformation as shown in figure below.
 
 <figure id="attachment_duration" style="width: 768px;text-align: center">
   <a href="https://github.com/newking9088/marketing_campaign_customer_segmentation_classification/blob/main/figures/duration.png">
@@ -99,7 +99,7 @@ Outliers in numerical variables were handled using the Winsorization method, cap
 
 ### Multicollinearity Check
 
-We examined potential multicollinearity issues among numerical variables using correlation as shown in Figure 3 and the Variation Inflation Factor (VIF). Variables with a correlation higher than 0.8 and VIF greater than 5, such as ‘emp.var.rate’, ‘cons.price.idx’, ‘euribor3m’, and ‘nr.employed’, were dropped.
+We examined potential multicollinearity issues among numerical variables using correlation as shown in figure below and the Variation Inflation Factor (VIF). Variables with a correlation higher than 0.8 and VIF greater than 5, such as ‘emp.var.rate’, ‘cons.price.idx’, ‘euribor3m’, and ‘nr.employed’, were dropped.
 
 <figure id="attachment_correlation" style="width: 768px;text-align: center">
   <a href="https://github.com/newking9088/marketing_campaign_customer_segmentation_classification/blob/main/figures/correlation.png">
@@ -343,7 +343,7 @@ It shows that call duration emerges as the most significant feature, followed by
 
 Our goal was to predict whether a customer will subscribe to CDs, focusing on optimizing recall while maintaining a balance with precision to achieve a higher F1 score. Among the models we trained, XGBoost stands out by providing a comparable F1 score to other models but with a better balance between precision and recall, and it generalizes well to unseen data. Therefore, we will proceed with hyperparameter tuning for the XGBoost model. Although we also hyper-tuned voting classifiers and neural networks, they underperformed compared to the XGBoost model.
 
-The XGBoost model was fine-tuned using `GridSearchCV`, resulting in optimal parameters: {‘colsample_bytree’: 1.0, ‘gamma’: 0.5, ‘max_depth’: 4, ‘min_child_weight’: 5, ‘subsample’: 1.0}, achieving a ROC-AUC score of 0.943. Further optimization of the probability threshold significantly improved the model’s performance on unseen data, boosting recall to 77.21%, precision to 55.4%, and the F1 score to 0.6623. Given the recall of 77.21%, the model correctly identifies 77.21% of actual subscribers. The remaining 22.79% of actual subscribers are missed. Precision of 55.4% indicates that out of all customers predicted as subscribers, 55.4% are correct, and the rest are false positives. Figure 6 presents the confusion matrix for the unseen data.
+The XGBoost model was fine-tuned using `GridSearchCV`, resulting in optimal parameters: {‘colsample_bytree’: 1.0, ‘gamma’: 0.5, ‘max_depth’: 4, ‘min_child_weight’: 5, ‘subsample’: 1.0}, achieving a ROC-AUC score of 0.943. Further optimization of the probability threshold significantly improved the model’s performance on unseen data, boosting recall to 77.21%, precision to 55.4%, and the F1 score to 0.6623. Given the recall of 77.21%, the model correctly identifies 77.21% of actual subscribers. The remaining 22.79% of actual subscribers are missed. Precision of 55.4% indicates that out of all customers predicted as subscribers, 55.4% are correct, and the rest are false positives. Figure below presents the confusion matrix for the unseen data.
 
 <figure id="attachment_cm" style="width: 746px; text-align: center;">
   <a href="https://github.com/newking9088/marketing_campaign_customer_segmentation_classification/blob/main/figures/cm.png">
