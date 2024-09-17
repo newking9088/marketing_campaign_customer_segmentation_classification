@@ -72,6 +72,12 @@ The demographic analysis shows that customers aged 30-70 are the most likely to 
 **Behavioral Segmentation:** ‘default’, ‘housing’, ‘loan’, ‘poutcome’, ‘campaign’, ‘pdays’, ‘previous’
 
 Customers with no default history are the most likely to subscribe to CDs. Housing loans have no significant effect on the likelihood of subscribing. People who have subscribed before have over a 65% chance of subscribing again. Additionally, customers who were contacted recently have a higher likelihood of subscribing to CDs. The likelihood of subscribing to CDs decreases exponentially with the number of calls made. Most customers who are likely to subscribe do so within the first few contacts. After 15 contacts, the likelihood of subscription almost drops to zero.
+<figure id="attachment_campaign_number" style="width: 768px; text-align: center;">
+  <a href="https://github.com/newking9088/marketing_campaign_customer_segmentation_classification/blob/main/figures/campaign_number.png">
+    <img src="https://github.com/newking9088/marketing_campaign_customer_segmentation_classification/blob/main/figures/campaign_number.png" alt="Subscription percentage vs campaign number" width="768" height="521" class="size-medium_large wp-image-campaign_number" />
+  </a>
+</figure>
+
 
 ### Categorical Feature Transformation
 
