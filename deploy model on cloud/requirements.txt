@@ -1,6 +1,6 @@
-streamlit
-pandas
-numpy
-xgboost
+streamlit==1.16.0
+numpy==1.19.5
+pandas==1.2.5
+xgboost==2.1.1
 
 
