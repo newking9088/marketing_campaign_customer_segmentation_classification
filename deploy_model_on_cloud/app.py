@@ -119,33 +119,9 @@ if uploaded_file is not None:
     test_data = pd.read_csv(uploaded_file)
 else:
     st.write("You are using default test data.")
-    uploaded_file = r"..\data\clean_data\clean_test_data.csv"
+    uploaded_file = os.path.join(current_dir, 'clean_test_data.csv')
     test_data = pd.read_csv(uploaded_file)
 
-    
-    # Define the expected columns based on the training data
-    # expected_columns = set(['age', 'job_admin.', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid',
-    #                         'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student',
-    #                     'job_technician', 'job_unemployed', 'job_unknown', 'marital_divorced', 
-    #                     'marital_married', 'marital_single', 'education_basic.4y', 'education_basic.6y',
-    #                         'education_basic.9y', 'education_high.school', 'education_illiterate', 
-    #                         'education_professional.course', 'education_university.degree', 
-    #                         'education_unknown', 'default_no', 'default_unknown', 'default_yes',
-    #                             'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular',
-    #                             'contact_telephone', 'month_apr', 'month_aug', 'month_dec', 'month_jul',
-    #                                 'month_jun', 'month_mar', 'month_may', 'month_nov', 'month_oct', 
-    #                                 'month_sep', 'day_of_week_fri', 'day_of_week_mon', 'day_of_week_thu', 
-    #                                 'day_of_week_tue', 'day_of_week_wed', 'duration', 'campaign', 'pdays', 
-    #                                 'previous', 'poutcome_failure', 'poutcome_nonexistent', 'poutcome_success',
-    #                                 'emp.var.rate', 'cons.price.idx', 'cons.conf.idx', 'euribor3m', 
-    #                                 'nr.employed'])
-
-    # # Check for missing columns
-    # test_columns = set(test_data.columns)
-    # missing_columns = expected_columns - test_columns
-    
-    # if missing_columns:
-    #     st.error(f"The following columns are missing from the uploaded file: {missing_columns}")
     
     # Display test data
     st.subheader("Test Data Set")
