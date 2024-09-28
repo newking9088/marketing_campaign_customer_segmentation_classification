@@ -8,14 +8,7 @@ st.set_page_config(
     page_title="CD Subscription Prediction",
     page_icon=":smiley:",
     layout="wide",
-    initial_sidebar_state="expanded",
-    theme={
-        "primaryColor": os.getenv("PRIMARY_COLOR", "#ad200f"),
-        "backgroundColor": os.getenv("BACKGROUND_COLOR", "#f0f7f3"),
-        "secondaryBackgroundColor": os.getenv("SECONDARY_BACKGROUND_COLOR", "#f5970c"),
-        "textColor": os.getenv("TEXT_COLOR", "#000000"),
-        "font": os.getenv("FONT", "sans serif")
-    }
+    initial_sidebar_state="expanded"
 )
 
 # Get the current directory of the script
