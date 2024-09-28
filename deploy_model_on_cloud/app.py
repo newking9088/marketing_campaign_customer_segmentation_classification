@@ -2,10 +2,18 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-import xgboost as xgb
+import os
+# import xgboost as xgb
 
-# Load the model
-model = pickle.load(open(r"best_xgb.pkl", 'rb'))
+# Get the current directory of the script
+current_dir = os.path.dirname(__file__)
+
+# Construct the full path to the pickle file
+model_path = os.path.join(current_dir, 'best_xgb.pkl')
+
+# Load the model from the pickle file
+with open(model_path, 'rb') as model_file:
+    model = pickle.load(model_file)
 
 # Function to make predictions
 def predict(data, threshold=0.29):
