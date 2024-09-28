@@ -4,13 +4,6 @@ import numpy as np
 import pickle
 import os
 
-st.set_page_config(
-    page_title="CD Subscription Prediction",
-    page_icon=":smiley:",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
 # Get the current directory of the script
 current_dir = os.path.dirname(__file__)
 
