@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-import xgboost as xgb
+# import xgboost as xgb
 
 # Load the model
-model = pickle.load(open(r"best_xgb.pkl", 'rb'))
+model = pickle.load(open(r"../ml pickle files/best_xgb.pkl", 'rb'))
 
 # Function to make predictions
 def predict(data, threshold=0.29):
