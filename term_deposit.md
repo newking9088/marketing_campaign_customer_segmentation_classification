@@ -17,3 +17,4 @@
         - Model Evaluation using Accuracy, Precision, F1-Score, AUC-ROC
 ##  Discussion and Recommendations
 ## References
+[A/B Testing](https://www.optimizely.com/optimization-glossary/ab-testing/)
